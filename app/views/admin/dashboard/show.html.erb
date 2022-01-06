@@ -1,2 +1,28 @@
 <h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<h3> Total # of Products Available : <%= @products %> </h3>
+
+<div class="panel panel-default products">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Qty Remaining</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @categories.each_with_index do |category, idx| %>
+    <tr>
+      <td>
+        <h4><%= category['category_name'] %></h4>
+      </td>
+      <td>
+        <h4><%= category['total_quantity'] %></h4>
+      </td>
+    </tr>
+  <% end %>
+    </tbody>
+</table>
+
+</div>
