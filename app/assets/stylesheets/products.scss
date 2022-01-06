@@ -15,7 +15,7 @@ main section.categories-show {
 
       border:        1px solid #ccc;
       border-radius: 5px;
-      padding:       15px;
+      //padding:       15px;
       padding-bottom: 80px;
       margin-top:    20px;
       // margin:        10px;
@@ -63,7 +63,18 @@ main section.categories-show {
     }
   }
 }
+.sold-out {
 
+  top: 0;
+  left: 0;
+  padding: 5px;
+  font-size: medium;
+  border-radius:5px 0px 15px 0px;
+  color : white;
+  background:rgb(230, 127, 127);
+  width : 33%;
+  height : 30px;
+}
 main section.products-show {
 
   .product-detail {
