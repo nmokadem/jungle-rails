@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     email = user_params[:email].downcase
     user = User.new(user_params.merge(email: email))
+    @user = user
     if user.save
       session[:user_id] = user.id
       redirect_to '/'

@@ -1,9 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  #validates_uniqueness_of :email, { case_sensitive: false }
-  #validates :email, uniqueness: { case_sensitive: false }
-
   validates :email, presence: true , uniqueness: { case_sensitive: false }
 
   validates :first_name, presence: true
@@ -20,13 +17,6 @@ class User < ActiveRecord::Base
     else
       nil
     end
-
-    # if user && user.authenticate(password)
-    #   session[:user_id] = user.id
-    #   redirect_to '/'
-    # else
-    #   redirect_to '/login'
-    # end
 
   end
 
